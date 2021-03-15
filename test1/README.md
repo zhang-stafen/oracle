@@ -25,8 +25,8 @@ GROUP BY d.department_name
 HAVING d.department_name in ('IT','Sales');
 
 #### 案例结果截图：
-![SQL语句2.PNG](/SQL语句2.png)
-![优化.PNG](/优化.png)
+![SQL语句2.PNG](./SQL语句2.png)
+![优化.PNG](./优化.png)
 #### 样例查询语句分析：
 我认为查询一的查询语句最优，因为第一个查询语句是在最后执行group语句，而第二个查询先执行group后再执行having语句，效率就会变得很慢。通过sqldeveloper的优化指导工具，给出的优化建议是考虑运行可以改进物理方案设计的访问指导或者创建推荐的索引。
 
