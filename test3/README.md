@@ -86,13 +86,13 @@ TABLESPACE USERS02
 NOCOMPRESS NO INMEMORY  
 );
 
-![1.png](/1.png)
-![2.png](/2.png)
-![3.png](/3.png)
+![1.png](./1.png)
+![2.png](./2.png)
+![3.png](./3.png)
 
 ## 查看数据库的使用情况
 查看表空间的数据库文件，以及每个文件的磁盘占用情况。
-![4.png](/4.png)
+![4.png](./4.png)
 
 ## 实验总结
 通过这次实验我学会了如何在虚拟机上创建分区表的方法和插入相关数据的语法。
