@@ -86,9 +86,9 @@ TABLESPACE USERS02
 NOCOMPRESS NO INMEMORY  
 );
 
-![1.png](/1.png)
-![2.png](/2.png)
-![3.png](/3.png)
+![/1.png](/1.png)
+![/2.png](/2.png)
+![/3.png](/3.png)
 
 ## 查看数据库的使用情况
 查看表空间的数据库文件，以及每个文件的磁盘占用情况。
