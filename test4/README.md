@@ -9,11 +9,14 @@
 ### 创建表及表的修改:
 1.部门表
 ![department.png](./department.png)
+
 2.产品表
 ![products.png](./products.png)
+
 3.员工表
 ![employees.png](./employees.png)
 ![employees2.png](./employees2.png)
+
 4.订单表和订单详情表
 ![orders.png](./orders.png)
 ### 索引的创建:
