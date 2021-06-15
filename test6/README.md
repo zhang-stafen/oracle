@@ -61,8 +61,8 @@ rid number(18) unique)tablespace library
 storage(initial 256k);
 
 ![创建表.png](./创建表.png)
-### 6.创建图书表
 
+### 6.创建图书表
 create table books(
 bno number(10) not null primary key,
 bname varchar2(20) not null,
@@ -81,7 +81,6 @@ bookstyle varchar(30));
 
 ![创建表.png](./创建表.png)
 ### 8.创建借阅表
-
 create table rb(
 readno number(10) not null primary key,
 rno number(10) not null,
@@ -91,6 +90,7 @@ bname varchar2(20),
 regdate date default sysdate,
 back char(2))tablespace library
 storage(initial 256k);
+
 ![创建表.png](./创建表.png)
 <!-- 为借阅表创建外键约束 -->
 alter table rb add constraint fk_rb foreign key
@@ -103,17 +103,18 @@ mname varchar2(20)not null,
 regdate date default sysdate
 )tablespace library
 storage(initial 256k);
+
 ![创建表.png](./创建表.png)
 ### 10.向表插入5万条数据
 #### 10.1 创建索引
 create sequence seq_newUserid increment by 1 start with 1 maxvalue 999999999;
+
 ![索引.png](./索引.png)
 #### 10.2 对每个表开始插入数据
 
 由于管理员人数又要求，所以向管理员表中只插入两条数据
 
 insert into manager(mno,mname) values(1,'沐沐');
-
 insert into manager(mno,mname) values(2,'勇勇');
 #### 向读者表插入
 create or replace
@@ -131,6 +132,7 @@ begin
             end if;
         end loop;
 end;
+
 ![procedure.png](./procedure.png)
 #### 向书籍表插入
 create or replace
@@ -148,6 +150,7 @@ begin
             end if;
         end loop;
 end;
+
 ![procedure.png](./procedure.png)
 #### 向书籍类型表插入
 create or replace
@@ -165,6 +168,7 @@ VALUES (seq_newUserid.nextval,'人文艺术类');
             end if;
         end loop;
 end;
+
 ![procedure.png](./procedure.png)
 #### 向借阅表插入
 create or replace
@@ -182,7 +186,7 @@ values(seq_newUserid.nextval,103,'海洋一',1010,'遮天10','N');
             end if;
         end loop;
 end;
-
+![procedure.png](./procedure.png)
 create or replace
 PROCEDURE insertdata4 as
 flag number;
@@ -198,6 +202,7 @@ values(seq_newUserid.nextval,105,'马六',1015,'斗罗大陆','N');
             end if;
         end loop;
 end;
+
 ![procedure.png](./procedure.png)
 #### 执行
 call insertdata4();
@@ -323,9 +328,11 @@ END;
 ### 15.备份
 cat rman_level0.sh
 ./rman_level0.sh
+
 ![1.png](./1.png)
 #### 15.1 查看备份内容
 rman  target
+
 ![2.png](./2.png)
 ![3.png](./3.png)
 
