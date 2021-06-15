@@ -59,6 +59,7 @@ rno number(10) not null primary key,
 rname varchar2(20), 
 rid number(18) unique)tablespace library
 storage(initial 256k);
+
 ![创建表.png](./创建表.png)
 ### 6.创建图书表
 
@@ -70,13 +71,14 @@ author varchar2(30) not null,
 bnum int not null)
 tablespace library
 storage(initial 256k);
+
 ![创建表.png](./创建表.png)
 ### 7.创建图书类别表
 
 create table book_style(
 bookstyleno varchar(30) primary key,
-bookstyle varchar(30)
-);
+bookstyle varchar(30));
+
 ![创建表.png](./创建表.png)
 ### 8.创建借阅表
 
